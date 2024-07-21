@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Challenge - Product Listing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to right, #f0f2f5, #e2e5e9); /* Light gradient background */
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1, p {
+            margin: 0;
+        }
+
+        /* Header Styles */
+        .header {
+            background: #232f3e; /* Dark Amazon Blue */
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .header img {
+            width: 200px; /* Larger logo size */
+            height: auto;
+            margin: 0 auto;
+            display: block;
+            background: #fff; /* White background behind the logo */
+            border-radius: 10px; /* Rounded corners */
+            padding: 10px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #fff;
+            margin-top: 1rem;
+        }
+
+        /* Container Styles */
+        .container {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex: 1;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .product {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: calc(33% - 1.5rem);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .product:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .product h2 {
+            margin-bottom: 0.5rem;
+            font-size: 1.6rem;
+            color: #FF9900; /* Amazon Yellow */
+            font-weight: 500;
+        }
+
+        .product p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .product button {
+            padding: 0.75rem 1.5rem;
+            background: #FF9900; /* Amazon Yellow */
+            border: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product button:hover {
+            background: #CC7A00; /* Darker Yellow */
+            transform: scale(1.05);
+        }
+
+        /* Admin Link Styles */
+        .admin-link {
+            color: #FF9900; /* Amazon Yellow */
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 2rem;
+            display: inline-block;
+            font-size: 1rem;
+        }
+
+        .admin-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Hidden Admin Link for advanced users */
+        .hidden-admin {
+            display: none;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: #232f3e; /* Dark Blue */
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product {
+                width: calc(50% - 1.5rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="images/amazon-re.png" alt="Amazon Logo">
+        <h1>Amazon Products</h1>
+    </div>
+    <div class="container">
+        <div class="products">
+            <div class="product">
+                <img src="images/flipperzero.jpg" alt="Product 1">
+                <h2>flipperzero</h2>
+                <p>hackers gadegts</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="images/pineapple.png" alt="Product 2">
+                <h2>wifi pineapple</h2>
+                <p>hackers gadegts</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="images/rubber_ducky-454A0716a.jpg" alt="Product 3">
+                <h2>usb rubber ducky</h2>
+                <p>hackers gadegts</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+        <!-- Hidden Admin Link for advanced users -->
+        <div class="hidden-admin">
+            <p>Hidden Admin Access: <a href="admin.html" class="admin-link">Admin Panel</a></p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Amazon CTF Challenge
+                            BY: arunvkofficial
+        </p>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

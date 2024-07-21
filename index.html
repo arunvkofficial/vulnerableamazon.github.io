@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem 3rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+        }
+
+        .login-container .logo {
+            width: 150px;
+            margin-bottom: 1.5rem;
+        }
+
+        .login-container h1 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .login-form input {
+            width: calc(100% - 2rem);
+            padding: 0.75rem;
+            margin: 0.5rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .login-form .btn {
+            width: calc(100% - 2rem);
+            padding: 0.75rem;
+            background: #ff9900;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin: 1rem 1rem 0.5rem 1rem;
+        }
+
+        .login-form .btn:hover {
+            background: #cc7a00;
+        }
+
+        .error {
+            color: red;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="images/amazon-re.png" alt="Amazon Logo" class="logo">
+        <h1>Amazon Login</h1>
+        <form id="loginForm" class="login-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="hidden" id="hiddenField" value="secretValue">
+            <button type="submit" class="btn">Login</button>
+            <p id="error" class="error"></p>
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loginForm = document.getElementById("loginForm");
+            const errorElement = document.getElementById("error");
+
+            loginForm.addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent the form from submitting the default way
+
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+
+                // Simulate login validation (replace with real validation in production)
+                if (username === "testuser" && password === "password123") {
+                    window.location.href = "products.html"; // Redirect to product.html
+                } else {
+                    errorElement.textContent = "Invalid username or password.";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
